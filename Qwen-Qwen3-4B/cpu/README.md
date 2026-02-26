@@ -3,6 +3,9 @@
 This folder contains Olive recipes for optimizing Qwen-Qwen3-4B targeting the CPU EP.
 
 MMLU evaluation: 0.72 
+
+(Compares favorably with results quoted in https://arxiv.org/pdf/2505.09388)
+
 ## What this folder is for
 
 - Execution Provider: CPU EP
