@@ -2,6 +2,7 @@
 
 This folder contains Olive recipes for optimizing Qwen-Qwen3-4B targeting the CPU EP.
 
+MMLU evaluation: 0.72 
 ## What this folder is for
 
 - Execution Provider: CPU EP
@@ -20,6 +21,8 @@ This folder contains Olive recipes for optimizing Qwen-Qwen3-4B targeting the CP
    - pip install -r requirements.txt
 3) Run Olive to build/optimize the model
    - olive run --config Qwen-Qwen3-4B_cpu_int4_kld_gradient.json
+4) Run an MMLU eval on the optimized model
+   - olive run --config Qwen-Qwen3-4B_cpu_int4_kld_gradient-eval.json
 
 Additional notes:
 - Optional: Use best practices when considering accuracy vs. memory to improve throughput on CPU.
@@ -27,4 +30,11 @@ Additional notes:
 
 ---
 
-This README was auto-generated for the CPU EP of Qwen-Qwen3-4B.
+Eval results log
+
++------------+-------------------+-------------------------+----------------+--------------------------------------------------------+
+| model_id   | parent_model_id   | from_pass               |   duration_sec | metrics                                                |
++============+===================+=========================+================+========================================================+
+| d272a4cc   | b59880be          | modelbuilder            |     0.00200009 | {                                                      |
+|            |                   |                         |                |   "mmlu-acc": 0.7210526315789474,                      |
+
